@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Store</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #FFA500;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Flexbox Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #777474;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    /* Flexbox layout for main content */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    /* Main Section (Product List) */
+    .main-content {
+      flex: 2 1 60%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Product Images */
+    .product-list img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width:300px;
+      height:auto;
+      object-fit: cover;
+      color: #2e6cf3;
+    }
+
+    .product-item {
+      margin-bottom: 20px;
+    }
+
+    /* Contact Form Section */
+    .contact-form {
+      flex: 1 1 30%;
+      background-color:#FFFFE0;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Styles */
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #004494;
+    }
+
+    /* To-Do List Section */
+    .todo-list {
+      background-color: #E6E6FA;
+      padding: 15px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .todo-list ul {
+      list-style-type: none;
+    }
+
+    .todo-list li {
+      padding: 8px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .todo-list button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .todo-list button:hover {
+      background-color: darkred;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-content, .contact-form {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+      }
+
+      nav a {
+        padding: 12px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HEALTH CARE MEDICAL STORE</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Main Content (Product List) -->
+    <section class="main-content">
+      <h2>Our Products</h2>
+      <div class="product-list">
+        <div class="product-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzZb3sxmWsVHWLSIMZM9zyeuyB2Msll60E_A&s" alt="Paracetamol Tablets">
+          <h3>Paracetamol Tablets</h3>
+          <p>Relieves pain and reduces fever. Available in 500mg tablets.</p>
+        </div>
+        <div class="product-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgK66OIv8rgeNQr9KhdTWmE-EqbAuJgWIrKg&s" alt="Vitamin C Supplements">
+          <h3>Vitamin C Supplements</h3>
+          <p>Boosts immunity and supports overall health. Available in 1000mg tablets.</p>
+        </div>
+        <div class="product-item">
+          <img src="https://images.apollo247.in/pub/media/catalog/product/C/O/COF0151_1-JULY23_1.jpg" alt="Cough Syrup">
+          <h3>Cough Syrup</h3>
+          <p>Effective for treating coughs and cold symptoms. Available in 100ml bottles.</p>
+        </div>
+        <div class="product-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ifWFxjWWNQWdXzjtnUn3pcSJ4C1mcwdoJA&s" alt="Bandages and Gauze">
+          <h3>Bandages and Gauze</h3>
+          <p>For first aid and wound care. Available in different sizes.</p>
+        </div>
+        <div class="product-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwO9uXUuAkC3RoyxeiSrl-jTmGbqyf7Pc0A&s" alt="Antiseptic Cream">
+          <h3>Antiseptic Cream</h3>
+          <p>Helps in preventing infection in minor cuts, scrapes, and burns.</p>
+        </div>
+        <div class="product-item">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/377515312/XE/LJ/RJ/205466558/untitledjpg-500x500.jpg" alt="Thermometers">
+          <h3>Thermometers</h3>
+          <p>Digital thermometers for accurate temperature readings.</p>
+        </div>
+      </div>
+
+      <!-- To-Do List Section (Inventory Management Example) -->
+      <div class="todo-list">
+        <h3>Inventory Management</h3>
+        <ul id="todo-list">
+          <!-- Dynamic list items will appear here -->
+        </ul>
+        <input type="text" id="new-item" placeholder="Add New Item" />
+        <button id="add-item">Add Item</button>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    // Form validation
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let message = document.getElementById('message').value;
+
+      // Simple validation
+      if (!name || !email || !message) {
+        alert('Please fill all the fields.');
+        return;
+      }
+
+      let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      alert('Form submitted successfully!');
+    });
+
+    // To-Do List functionality (for inventory management)
+    const addItemButton = document.getElementById('add-item');
+    const todoList = document.getElementById('todo-list');
+    const newItemInput = document.getElementById('new-item');
+
+    addItemButton.addEventListener('click', function() {
+      let itemText = newItemInput.value.trim();
+
+      if (itemText) {
+        let li = document.createElement('li');
+        li.textContent = itemText;
+
+        let removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.onclick = function() {
+          li.remove();
+          alert(`The item "${itemText}" has been removed from the list.`);
+        };
+
+        li.appendChild(removeButton);
+        todoList.appendChild(li);
+        
+        newItemInput.value = '';  // Clear input field
+        alert(`The item "${itemText}" has been added to the list.`);
+      } else {
+        alert('Please enter an item to add.');
+      }
+    });
+  </script>
+</body>
+</html>
+
